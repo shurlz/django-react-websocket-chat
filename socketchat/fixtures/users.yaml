@@ -1,0 +1,17 @@
+- model: auth.User
+  pk: 1000
+  fields:
+    username: TestUser1
+    password: password
+
+- model: auth.User
+  pk: 2000
+  fields:
+    username: TestUser2
+    password: password
+
+- model: auth.User
+  pk: 3000
+  fields:
+    username: TestUser3
+    password: password

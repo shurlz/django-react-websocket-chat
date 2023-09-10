@@ -1,0 +1,23 @@
+.navbar {
+  background-color: rgb(44, 42, 42);
+  color: whitesmoke;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+}
+
+.company-name {
+  width: 80%;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.company-logo {
+  width: 20%;
+  text-align: right;
+}
+.company-logo img {
+  width: 1.5rem;
+  height: 1.5rem;
+}

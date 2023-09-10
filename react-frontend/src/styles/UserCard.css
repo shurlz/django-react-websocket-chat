@@ -1,0 +1,30 @@
+.user {
+  margin: 2rem 5%;
+  width: 15%;
+  background-color: rgb(44, 42, 42);
+  color: whitesmoke;
+}
+
+.user .bottom-section {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.user div img {
+  width: 100%;
+  height: 7rem;
+}
+
+.user-username {
+  width: 100%;
+  text-align: center;
+}
+
+.chat-button button {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--font-sofia);
+  background-color: whitesmoke;
+  cursor: pointer;
+  border: 0.1rem solid black;
+}

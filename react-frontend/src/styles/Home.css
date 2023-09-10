@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+
+:root {
+  --font-sofia: "Sofia", poppins;
+}
+
+.authpage {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.authpage .auth-welcome-text {
+  margin: 2rem;
+  text-align: center;
+  font-family: var(--font-sofia);
+  font-weight: bold;
+}
+
+.authpage .auth-form {
+  margin: 3rem 20%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.authpage .auth-form input {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border: solid 0.15rem rgb(44, 42, 42);
+  padding: 0.8rem 1.1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.authpage .auth-form button {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 0.8rem 1.1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: rgb(44, 42, 42);
+  color: whitesmoke;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* --------- Chat Page ------------ */
+.authpage .messages {
+  margin: 3rem 20%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.message {
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 0.1rem rgb(44, 42, 42);
+  margin: 0.5rem 0;
+  border-radius: 0.2rem;
+}
+
+.message .message-body {
+  display: block;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+.message .message-footer {
+  display: flex;
+  width: 100%;
+}
+
+.message .message-footer div {
+  width: 50%;
+  text-align: right;
+}
+
+/* --------- Home Page ------------ */
+
+.homepage {
+  max-width: 100%;
+  margin: 0 10%;
+  box-sizing: border-box;
+}
+
+.homepage .welcome-user-text {
+  margin: 2rem 0;
+  text-align: left;
+  font-family: var(--font-sofia);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.homepage .all-users-header {
+  margin: 2rem 0;
+  text-align: center;
+  font-family: var(--font-sofia);
+  font-weight: bold;
+}
+
+.homepage .users-container {
+  box-sizing: border-box;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
