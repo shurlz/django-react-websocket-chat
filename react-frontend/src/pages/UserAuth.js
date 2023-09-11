@@ -9,9 +9,8 @@ const Auth = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmitUser = async (username, password) => {
+  const handleSubmitUser = async () => {
     const payload = { username, password };
-
     const res = await fetch(`${API_URL}/v1/auth/`, {
       method: "POST",
       cache: "no-cache",
@@ -39,31 +38,27 @@ const Auth = () => {
       </div>
 
       <div className="auth-form">
-        <form>
-          <input
-            placeholder="username"
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-            value={username}
-            required
-          />
-          <input
-            placeholder="password"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            value={password}
-            required
-          />
-          <button
-            onClick={() => {
-              handleSubmitUser(username, password);
-            }}
-          >
-            Submit
-          </button>
-        </form>
+        <input
+          placeholder="username"
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+          value={username}
+          required
+        />
+        <input
+          placeholder="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          value={password}
+          required
+        />
+        <button
+          onClick={handleSubmitUser}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );
