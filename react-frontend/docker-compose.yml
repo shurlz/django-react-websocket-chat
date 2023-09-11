@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app-frontend:
+    container_name: app-frontend
+    build: .
+    environment:
+      - "REACT_APP_API_KEY=59a64891"
+    ports:
+      - 3000:3000
+    
