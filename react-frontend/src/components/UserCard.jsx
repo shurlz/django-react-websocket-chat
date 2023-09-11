@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/UserCard.css";
 import { useNavigate } from "react-router-dom";
 import avatar from "../assets/avatar.jpg";
+import { API_URL } from "../constants.js";
+
 
 const UserCard = ({ user, token }) => {
   const navigate = useNavigate();
@@ -9,7 +11,7 @@ const UserCard = ({ user, token }) => {
   const handleSubmit = async () => {
     const payload = { "requested-user-id": user.id };
 
-    const res = await fetch("http://localhost:8000/v1/chatspace/", {
+    const res = await fetch(`${API_URL}/v1/chatspace/`, {
       method: "POST",
       cache: "no-cache",
       body: JSON.stringify(payload),

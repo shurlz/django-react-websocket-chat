@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import UserCard from "../components/UserCard";
+import { API_URL } from "../constants.js";
 
 import "../styles/Home.css";
+
 
 const UserHome = () => {
   const [allUsers, setAllUsers] = useState([]);
@@ -10,7 +12,7 @@ const UserHome = () => {
   const userdata = location.state || {};
 
   const fetchUsers = async () => {
-    const res = await fetch("http://localhost:8000/v1/all-users/", {
+    const res = await fetch(`${API_URL}/v1/all-users/`, {
       method: "GET",
       cache: "no-cache",
       headers: {

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/Home.css";
 import MessageCard from "../components/MessageCard";
+import { API_URL, WEB_SOCKET_URL } from "../constants.js";
+
 
 const ChatPage = () => {
   const location = useLocation();
@@ -10,7 +12,7 @@ const ChatPage = () => {
 
   const fetchMessages = async () => {
     const payload = { "chatspace-id": data.chat_space_id };
-    const res = await fetch("http://localhost:8000/v1/messages/chatspace/", {
+    const res = await fetch(`${API_URL}/v1/messages/chatspace/`, {
       method: "POST",
       cache: "no-cache",
       body: JSON.stringify(payload),
@@ -28,7 +30,7 @@ const ChatPage = () => {
   }, []);
 
   const ws = new WebSocket(
-    `ws://localhost:8000/ws/chat/${data.chat_space_id}/?token=${data.token}`,
+    `${WEB_SOCKET_URL}/ws/chat/${data.chat_space_id}/?token=${data.token}`,
   );
   ws.onopen = () => {
     // console.log("WebSocket connection established.");

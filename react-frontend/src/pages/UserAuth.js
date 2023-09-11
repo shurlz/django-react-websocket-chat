@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
+import { API_URL } from "../constants.js";
+
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -10,7 +12,7 @@ const Auth = () => {
   const handleSubmitUser = async (username, password) => {
     const payload = { username, password };
 
-    const res = await fetch("http://localhost:8000/v1/auth/", {
+    const res = await fetch(`${API_URL}/v1/auth/`, {
       method: "POST",
       cache: "no-cache",
       body: JSON.stringify(payload),
