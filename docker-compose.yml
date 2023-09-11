@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  app-database:
+    container_name: app-database
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_PASSWORD: password10
+      POSTGRES_USER: root
+      POSTGRES_DB: socketdb
+      POSTGRES_HOST: database
+    ports:
+      - 5432:5432
+    networks:
+      - socket-chat-nets
+
+  app-backend:
+    container_name: app-backend
+    restart: on-failure
+    build: ./socketchat
+    env_file:
+      - ./socketchat/.docker.env
+    depends_on:
+      - app-database
+    ports:
+      - 8000:8000
+    networks:
+      - socket-chat-nets
+  
+  app-frontend:
+    container_name: app-frontend
+    build: ./react-frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - app-backend
+    networks:
+      - socket-chat-nets
+    
+networks:
+  socket-chat-nets:
+
+volumes:
+  dbdata:
