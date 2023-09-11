@@ -31,8 +31,8 @@ services:
     container_name: app-frontend
     build: ./react-frontend
     environment:
-      - REACT_APP_BACKEND_URL=http://backend:8000
-      - REACT_APP_WEBSOCKET_URL=ws://backend:8000
+      - REACT_APP_BACKEND_URL=http://localhost:8000
+      - REACT_APP_WEBSOCKET_URL=ws://localhost:8000
     ports:
       - 3000:3000
     depends_on:
