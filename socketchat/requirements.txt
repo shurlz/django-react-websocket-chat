@@ -19,7 +19,6 @@ daphne==4.0.0
 dbus-python==1.2.18
 distlib==0.3.7
 distro==1.7.0
-distro-info===1.1build1
 Django==4.2.5
 django-cors-headers==4.2.0
 django-csp==3.7
@@ -29,7 +28,6 @@ filelock==3.12.2
 httplib2==0.20.2
 hyperlink==21.0.0
 idna==3.4
-importlib-metadata==4.6.4
 incremental==22.10.0
 jeepney==0.7.1
 Jinja2==3.0.3
@@ -60,9 +58,7 @@ PyJWT==2.3.0
 pykerberos==1.1.14
 pyOpenSSL==23.2.0
 pyparsing==2.4.7
-python-apt==2.4.0+ubuntu1
 python-dotenv==1.0.0
-pytz==2023.3.post1
 pywinrm==0.3.0
 PyYAML==5.4.1
 requests==2.25.1
@@ -81,9 +77,7 @@ tomli==2.0.1
 Twisted==23.8.0
 txaio==23.1.1
 typing_extensions==4.7.1
-ubuntu-advantage-tools==8001
 ufw==0.36.1
-unattended-upgrades==0.1
 urllib3==1.26.5
 uuid==1.30
 virtualenv==20.24.3
